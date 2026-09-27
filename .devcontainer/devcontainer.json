@@ -1,9 +1,6 @@
 {
   "name": "Node.js SQLite App",
   "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
-  "features": {
-    "ghcr.io/devcontainers/features/sqlite:1": {}
-  },
   "forwardPorts": [5173, 3000],
   "portsAttributes": {
     "5173": {
