@@ -1,0 +1,20 @@
+{
+  "name": "Node.js SQLite App",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/sqlite:1": {}
+  },
+  "forwardPorts": [5173, 3000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Frontend",
+      "onAutoForward": "openPreview"
+    },
+    "3000": {
+      "label": "Backend",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "cd backend && npm install && cd ../frontend && npm install",
+  "postStartCommand": "nohup bash ./scripts/start_workspace.sh > /tmp/workspace.log 2>&1 &"
+}
